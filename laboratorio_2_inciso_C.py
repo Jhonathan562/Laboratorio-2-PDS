@@ -65,7 +65,7 @@ print(f"Media de la señal con librerias: {media_librerias:.4f}")
 print(f"Longitud del vector con librerias: {longitud_vector_librerias}")
 print(f"Desviación estándar con librerias: {desviacion_librerias:.4f}")
 print(f"Coeficiente de variación con librerias: {coeficiente_variacion_librerias:.4f}")
-print(f"La mediana es : {mediana_librerias:.4f}")
+print(f"La mediana con librerias es: {mediana_librerias:.4f}")
 
 
 t = np.linspace(0, 1, fs, endpoint=False) 

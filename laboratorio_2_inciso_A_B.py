@@ -81,7 +81,7 @@ plt.show()
 
 
 
-# Inciso o pun to 8(b)
+# Inciso o punto 8(b)
 Ts = 1.25e-3  #𝑇𝑠 = 1.25𝑚s
 n = np.arange(9) # 𝑝𝑎𝑟𝑎 0 ≤ 𝑛 < 9 
 f = 100  # 100𝑛𝑇s
