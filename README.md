@@ -16,6 +16,7 @@ En la señal de audio original hay  ruido y seria x[n] que representa la entrada
 Una vez explicada la convolución pasaremos a explicar el inciso numero uno que se realizó a mano.
 
 ![alt text](<Images/convolución mano.jpg>)
+
 El inciso nos decia que hallaramos la convolución de las señales de entrada x[n] y la señal de impulso h[n] que en este caso los datos numericos de las señales fueron el codigo y el numero de documento de los integrantes del grupo. En la imagen se puede evidenciar en la fila 1 y columna 1 de las tablas que se encuentran registrados los datos numericos expuestos. 
 
 Usamos un ¨metodo de tabla de convolución¨ ya que es la manera más eficiente de encontrar la señal de salida y[n] cuando las señales multiplicadas tienen valores numericos muy extensos. En este método, se hace una tabla con la señal de entrada x[n] en la fila 1 en la parte superior  y la función de impulso h[n] en la columna izquierda. Luego, se multiplican los valores de las señales  de entrada y de función de impulso, y se suman los resultados para obtener la salida Y[n]. El procedimiento se hace de la siguente manera.
@@ -31,6 +32,7 @@ Usamos un ¨metodo de tabla de convolución¨ ya que es la manera más eficiente
 La gráfica de la convolución nos  muestra la relación  entre la suma de las multiplicaciones de los valores de la señal de entrada x[n] y la función de impulso h[n] en función del número de muestras que resultaron de la señal de salida y[n] que en nuestro caso fueron 16 muestras.
 
 ![alt text](<Images/grafica mano.jpg>)
+
 El eje X de la grafica de la imagen numero 2 representa el número de muestrasque se obtuvo de la señal de entrada x[n] y la función de impulso h[n] que se están multiplicando y sumando. A su vez en el eje y se representa el valor que hubo de la  multiplicación de los valores de la señal de entrada x[n] y la función de impulso h[n] en cada muestra.
 ## Inciso A en Python
 Para realizar el primer ejercicio del inciso de manera digital se realizan los sifuientes pasos.
@@ -75,6 +77,7 @@ Luego de este vamos a graficar de la misma manera x[n]
     plt.grid()
     plt.show()
 ![alt text](Images/xn_Jhonathan.png)
+
 Aquí se puede observar de manera digital los datos de la señal que es el el documento de indentidad, que está representando la señal de entrada h[n].
 
 Ahora luego de esto haremos la convolucion de las dos graficas esto a traves del sistema para dar a y[n] el cual sera la convolucion de h[n] y x[n]
@@ -116,6 +119,7 @@ ahora se raliza el mismo ejercicio para hallár y graficar la convolución del c
         plt.grid()
         plt.show()
 ![alt text](Images/hn_Jose.png)
+
 Donde se observa la señal de manera digital que representa el h[n].
 
  # Graficar x[n] Jose
@@ -128,6 +132,7 @@ Donde se observa la señal de manera digital que representa el h[n].
         plt.grid()
         plt.show()
 ![alt text](Images/xn_Jose.png)
+
 Nuevamente se observa la señal de entrada x[n] de manera digital de José.
 
      y = np.convolve(x, h, mode='full') #Calcular la convolucion entre h[n] y x[n]
@@ -147,6 +152,7 @@ Señal de la convolucion entre h[n] y x[n] osea y[n] de Jose:
         plt.show()
 
 ![alt text](Images/Convolucion_yn_Jose.png)
+
 Por ultimo obtenemos la señal de la convolución y[n] de José.
 
 ## Inciso B
@@ -181,6 +187,7 @@ Luego de este vamos a graficar la correlacion entre el seno y el coseno de x1 y 
         plt.show()
 
 ![alt text](Images/Correlacion_x1_x2.png)
+
 Para encontrar la correlación entre las señales, primero necesitamos calcular la media de cada una de ellas de x1[nTs] y x2[nTs].
 
 Una vez que se tienen  las medias, podemos calcular la correlación entre x1[nTs] y  x2[nTs].
@@ -219,6 +226,7 @@ Luego de esto vamos a graficar la señal original, esto con plt
         plt.show()
 
 ![alt text](Images/Signal_EMG_origin.png)
+
 La electromiografía (EMG) es una técnica utilizada para registrar la actividad eléctrica de los músculos.Una señal de EMG se puede analizar para extraer información sobre la función muscular y diagnosticar trastornos neuromusculares. Esta señal se toma en función del tiempo y la amplitud en el eje x se toma el tiempo y en el eje y se toma la ampplitud de la señal que es el impulso electrico del musculo.
 
 
@@ -316,6 +324,7 @@ Ahora vamos a graficar la señal pero como transformada de Fourier en donde la f
         plt.show()
 
 ![Signal_Espectro](Images/Signal_Espectro.png)
+
 Se necesita graficar la señal EMG con la transformada de Fourier para analizar la frecuencia y la potencia de la señal. Al graficar la señal EMG en el dominio de la frecuencia, se puede lograr :
 
 - Identificar las frecuencias dominantes en la señal
@@ -397,6 +406,7 @@ Graficamos el Histograma en cuanto a la frecuencia, esto con la magnitud
         plt.show()
 
 ![Histograma_frecuencia](Images/Histograma_frecuencia.png)
+
 La frecuencia de 5 Hz es la frecuencia dominante en tu señal de EMG. Esto sugiere que la actividad muscular que estás registrando tiene una frecuencia principal de 5 Hz. Segun los textos la frecuencia de 5 Hz es dentro del rango normal para la actividad muscular. Esto sugiere que la actividad muscular que estás registrando es normal y no hay signos de patología.
 
 
